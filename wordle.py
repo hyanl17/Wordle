@@ -42,7 +42,6 @@ total_number_of_guesses = 6
 number_of_uses_of_help = 0
 
 clear()
-print (random_word)
 print('Enter "help" for instructions on how to play')
 
 while guess != random_word and number_of_guesses < 6:
