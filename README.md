@@ -3,7 +3,7 @@ Wordle is a word game with the object of guessing the mystery five-letter word i
 
 You will have six chances to guess the mystery word.
 
-To kick off the game, you must enter a valid five-letter word. Hit the enter/return button to submit.
+To kick off the game, you must enter a valid five-letter word.
 
 After each guess, the color of the letter will change to show how close your guess was to the mystery word:
 * If the letter turns green, it means that letter is in the mystery word and you have placed it in the right spot.
