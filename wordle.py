@@ -34,7 +34,7 @@ with open('/usr/share/dict/words') as file:
 guess = ''
 guessed_word_list = []
 
-random_word = get_random(word_list)
+mystery_word = get_random(word_list)
 low_alphabet = list(string.ascii_lowercase)
 
 number_of_guesses = 0
@@ -44,7 +44,7 @@ number_of_uses_of_help = 0
 clear()
 print('Enter "help" for instructions on how to play')
 
-while guess != random_word and number_of_guesses < 6:
+while guess != mystery_word and number_of_guesses < 6:
     guess = input('Enter your guess: ').lower()
     if guess == 'help':
         clear()
@@ -53,9 +53,9 @@ while guess != random_word and number_of_guesses < 6:
             print(help)
         for guess_word in guessed_word_list:
             for index in range(len(guess_word)):
-                if guess_word[index] == random_word[index]:
+                if guess_word[index] == mystery_word[index]:
                         print(f'\033[30;42m {guess_word[index]} \033[0m', end = '')
-                elif guess_word[index] in random_word:
+                elif guess_word[index] in mystery_word:
                         print(f'\033[30;43m {guess_word[index]} \033[0m', end = '')
                 else:
                         print(f'\033[30;100m {guess_word[index]} \033[0m', end = '')
@@ -72,9 +72,9 @@ while guess != random_word and number_of_guesses < 6:
             clear()
             for guess_word in guessed_word_list:
                 for index in range(len(guess_word)):
-                    if guess_word[index] == random_word[index]:
+                    if guess_word[index] == mystery_word[index]:
                         print(f"\033[30;42m {guess_word[index]} \033[0m", end = '')
-                    elif guess_word[index] in random_word:
+                    elif guess_word[index] in mystery_word:
                         print(f"\033[30;43m {guess_word[index]} \033[0m", end = '')
                     else:
                         print(f"\033[30;100m {guess_word[index]} \033[0m", end = '')
@@ -85,9 +85,9 @@ while guess != random_word and number_of_guesses < 6:
             clear()
             for guess_word in guessed_word_list:
                 for index in range(len(guess_word)):
-                    if guess_word[index] == random_word[index]:
+                    if guess_word[index] == mystery_word[index]:
                         print(f"\033[30;42m {guess_word[index]} \033[0m", end = '')
-                    elif guess_word[index] in random_word:
+                    elif guess_word[index] in mystery_word:
                         print(f"\033[30;43m {guess_word[index]} \033[0m", end = '')
                     else:
                         print(f"\033[30;100m {guess_word[index]} \033[0m", end = '')
@@ -98,9 +98,9 @@ while guess != random_word and number_of_guesses < 6:
             clear()
             for guess_word in guessed_word_list:
                 for index in range(len(guess_word)):
-                    if guess_word[index] == random_word[index]:
+                    if guess_word[index] == mystery_word[index]:
                         print(f"\033[30;42m {guess_word[index]} \033[0m", end = '')
-                    elif guess_word[index] in random_word:
+                    elif guess_word[index] in mystery_word:
                         print(f"\033[30;43m {guess_word[index]} \033[0m", end = '')
                     else:
                         print(f"\033[30;100m {guess_word[index]} \033[0m", end = '')
@@ -111,9 +111,9 @@ while guess != random_word and number_of_guesses < 6:
             clear()
             for guess_word in guessed_word_list:
                 for index in range(len(guess_word)):
-                    if guess_word[index] == random_word[index]:
+                    if guess_word[index] == mystery_word[index]:
                         print(f"\033[30;42m {guess_word[index]} \033[0m", end = '')
-                    elif guess_word[index] in random_word:
+                    elif guess_word[index] in mystery_word:
                         print(f"\033[30;43m {guess_word[index]} \033[0m", end = '')
                     else:
                         print(f"\033[30;100m {guess_word[index]} \033[0m", end = '')
@@ -126,18 +126,18 @@ while guess != random_word and number_of_guesses < 6:
             guessed_word_list.append(guess)
             for guess_word in guessed_word_list:
                 for index in range(len(guess_word)):
-                    if guess_word[index] == random_word[index]:
+                    if guess_word[index] == mystery_word[index]:
                         print(f"\033[30;42m {guess_word[index]} \033[0m", end = '')
-                    elif guess_word[index] in random_word:
+                    elif guess_word[index] in mystery_word:
                         print(f"\033[30;43m {guess_word[index]} \033[0m", end = '')
                     else:
                         print(f"\033[30;100m {guess_word[index]} \033[0m", end = '')
                 new_line()
-            if guess == random_word:
-                print(f'You correctly guessed the word: {random_word}')
+            if guess == mystery_word:
+                print(f'You correctly guessed the word: {mystery_word}')
                 print(f'You took number of guesses: {number_of_guesses}')
             else:
                 total_number_of_guesses -= 1
                 print(f'Guesses remaining: {total_number_of_guesses}')
                 if number_of_guesses == 6:
-                    print(f'The mystery word is: {random_word}')
+                    print(f'The mystery word is: {mystery_word}')
