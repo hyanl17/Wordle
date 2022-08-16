@@ -30,7 +30,6 @@ low_alphabet = list(string.ascii_lowercase)
 
 number_of_guesses = 0
 total_number_of_guesses = 6
-number_of_uses_of_help = 0
 
 clear()
 print('Enter "help" for instructions on how to play')
