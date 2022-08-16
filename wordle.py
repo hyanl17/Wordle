@@ -2,24 +2,15 @@ import string
 from random import random
 
 def get_random(list):
-    '''
-    this function gets a random word from a list
-    '''
     index_length = len(list)
     index = int(index_length*random())
     word = list[index]
     return word
 
 def clear():
-    '''
-    this function clears the terminal
-    '''
     print("\033c", end = '')
 
 def new_line():
-    '''
-    this function prints a new line
-    '''
     print('\n')
 
 word_length = 5
@@ -62,10 +53,8 @@ while guess != mystery_word and number_of_guesses < 6:
             new_line()
         print(f'Guesses remaining: {total_number_of_guesses}')
     else:
-        number_of_letters = 0
         non_letter_character_list = []
         for letter in guess:
-            number_of_letters += 1
             if low_alphabet.count(letter) < 1:
                 non_letter_character_list.append(letter)
         if len(non_letter_character_list) > 0:
